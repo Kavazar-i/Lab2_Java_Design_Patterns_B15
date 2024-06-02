@@ -1,0 +1,1 @@
+# Lab2_Java_Design_Patterns_B15
