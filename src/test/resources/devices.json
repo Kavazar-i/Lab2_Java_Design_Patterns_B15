@@ -1,0 +1,10 @@
+[
+  {
+    "type": "Light",
+    "state": "On"
+  },
+  {
+    "type": "Thermostat",
+    "state": "Off"
+  }
+]
