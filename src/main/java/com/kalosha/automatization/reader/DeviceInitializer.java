@@ -10,13 +10,10 @@ import com.kalosha.automatization.model.state.OnState;
 import com.kalosha.automatization.model.state.State;
 import org.apache.log4j.Logger;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
-import java.net.URISyntaxException;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Objects;
 import java.util.Random;
 
 public class DeviceInitializer {
@@ -53,7 +50,7 @@ public class DeviceInitializer {
                     } else {
                         continue;
                     }
-                    State state = data.state.equals("On") ? new OnState(device.getImplementation()) : new OffState(device.getImplementation());
+                    State state = data.state.equals("On") ? new OnState(device.getDevice()) : new OffState(device.getDevice());
                     device.setState(state);
                     repository.addDevice(device);
                     logger.info(String.format("Initialized %s with state %s", data.type, data.state));
@@ -80,7 +77,7 @@ public class DeviceInitializer {
                 device = deviceFactory.createThermostat();
             }
 
-            State state = stateStr.equals("On") ? new OnState(device.getImplementation()) : new OffState(device.getImplementation());
+            State state = stateStr.equals("On") ? new OnState(device.getDevice()) : new OffState(device.getDevice());
             device.setState(state);
             repository.addDevice(device);
             logger.info(String.format("Generated %s with state %s", type, stateStr));

@@ -1,39 +1,38 @@
 package com.kalosha.automatization.model.light;
 
 import com.kalosha.automatization.model.device.Device;
-import com.kalosha.automatization.model.light.impl.LightImplementation;
+import com.kalosha.automatization.model.light.impl.LightImpl;
 import com.kalosha.automatization.model.state.State;
 
 public class Light extends Device {
-    LightImplementation implementation;
+    LightImpl light;
 
-    public Light(LightImplementation implementation) {
-        super(implementation);
-        this.implementation = implementation;
+    public Light(LightImpl light) {
+        super(light);
+        this.light = light;
     }
 
     @Override
-    public void turnOn() {
-        implementation.turnOn();
+    public boolean turnOn() {
+        return light.turnOn();
     }
 
     @Override
-    public void turnOff() {
-        implementation.turnOff();
+    public boolean turnOff() {
+        return light.turnOff();
     }
 
     @Override
-    public void setState(State state) {
-        implementation.changeState(state);
+    public boolean setState(State state) {
+        return light.changeState(state);
     }
 
-//    @Override
-    public void setBrightness(Integer brightness) {
-        implementation.setParameter(brightness);
+    public boolean setBrightness(Integer brightness) {
+        return light.setParameter(brightness);
     }
 
     @Override
-    public void setParameter(Integer parameter) {
-        implementation.setParameter(parameter);
+    public boolean setParameter(Integer parameter) {
+        return light.setParameter(parameter);
     }
 }

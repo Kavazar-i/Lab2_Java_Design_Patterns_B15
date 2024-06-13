@@ -1,14 +1,14 @@
 package com.kalosha.automatization.model.state;
 
-import com.kalosha.automatization.model.device.impl.DeviceImplementation;
+import com.kalosha.automatization.model.device.impl.DeviceImpl;
 
 public abstract class State {
-    DeviceImplementation implementation;
+    DeviceImpl device;
 
-    public State(DeviceImplementation implementation) {
-        this.implementation = implementation;
+    public State(DeviceImpl device) {
+        this.device = device;
     }
 
-    abstract void setOn();
-    abstract void setOff();
+    abstract boolean setOn();
+    abstract boolean setOff();
 }

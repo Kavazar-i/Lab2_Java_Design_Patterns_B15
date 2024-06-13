@@ -1,41 +1,39 @@
 package com.kalosha.automatization.model.thermostat;
 
 import com.kalosha.automatization.model.device.Device;
-import com.kalosha.automatization.model.device.impl.DeviceImplementation;
-import com.kalosha.automatization.model.light.impl.LightImplementation;
 import com.kalosha.automatization.model.state.State;
-import com.kalosha.automatization.model.thermostat.impl.ThermostatImplementation;
+import com.kalosha.automatization.model.thermostat.impl.ThermostatImpl;
 
 public class Thermostat extends Device {
-    ThermostatImplementation implementation;
+    ThermostatImpl thermostat;
 
-    public Thermostat(ThermostatImplementation implementation) {
-        super(implementation);
-        this.implementation = implementation;
-    }
-
-//    @Override
-    public void setTemperature(int temperature) {
-        implementation.setParameter(temperature);
+    public Thermostat(ThermostatImpl thermostat) {
+        super(thermostat);
+        this.thermostat = thermostat;
     }
 
     @Override
-    public void turnOn() {
-
+    public boolean turnOn() {
+        return thermostat.turnOn();
     }
 
     @Override
-    public void turnOff() {
-
+    public boolean turnOff() {
+        return thermostat.turnOff();
     }
 
     @Override
-    public void setState(State state) {
-
+    public boolean setState(State state) {
+        return thermostat.changeState(state);
     }
 
+    public boolean setTemperature(int temperature) {
+        return thermostat.setParameter(temperature);
+    }
+
+
     @Override
-    public void setParameter(Integer parameter) {
-        implementation.setParameter(parameter);
+    public boolean setParameter(Integer parameter) {
+        return thermostat.setParameter(parameter);
     }
 }

@@ -1,20 +1,20 @@
 package com.kalosha.automatization.model.state;
 
-import com.kalosha.automatization.model.device.impl.DeviceImplementation;
+import com.kalosha.automatization.model.device.impl.DeviceImpl;
 
 public class OffState extends State {
 
-    public OffState(DeviceImplementation implementation) {
+    public OffState(DeviceImpl implementation) {
         super(implementation);
     }
 
     @Override
-    void setOn() {
-        implementation.changeState(new OnState(implementation));
+    boolean setOn() {
+        return device.changeState(new OnState(device));
     }
 
     @Override
-    void setOff() {
-
+    boolean setOff() {
+        return false;
     }
 }

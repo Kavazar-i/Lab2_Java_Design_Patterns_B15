@@ -17,9 +17,9 @@ public class DeviceRepository {
         return devices;
     }
 
-    public Device findDeviceByType(Class<? extends Device> deviceType) {
+    public Device findDeviceByType(String deviceTypeName) {
         return devices.stream()
-                .filter(deviceType::isInstance)
+                .filter(device -> device.getClass().getSimpleName().equals(deviceTypeName))
                 .findFirst()
                 .orElse(null);
     }

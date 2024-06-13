@@ -1,27 +1,27 @@
 package com.kalosha.automatization.model.device;
 
-import com.kalosha.automatization.model.device.impl.DeviceImplementation;
+import com.kalosha.automatization.model.device.impl.DeviceImpl;
 import com.kalosha.automatization.model.state.OffState;
 import com.kalosha.automatization.model.state.State;
 
 public abstract class Device {
-    private DeviceImplementation implementation;
+    private DeviceImpl device;
     private State state;
 
-    protected Device(DeviceImplementation implementation) {
-        this.implementation = implementation;
-        this.state = new OffState(this.implementation);
+    protected Device(DeviceImpl device) {
+        this.device = device;
+        this.state = new OffState(this.device);
     }
 
-    public abstract void turnOn();
+    public abstract boolean turnOn();
 
-    public abstract void turnOff();
+    public abstract boolean turnOff();
 
-    public abstract void setState(State state);
+    public abstract boolean setState(State state);
 
-    public abstract void setParameter(Integer parameter);
+    public abstract boolean setParameter(Integer parameter);
 
-    public DeviceImplementation getImplementation() {
-        return implementation;
+    public DeviceImpl getDevice() {
+        return device;
     }
 }

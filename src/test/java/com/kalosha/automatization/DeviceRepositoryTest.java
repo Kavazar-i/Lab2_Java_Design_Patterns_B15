@@ -40,8 +40,8 @@ public class DeviceRepositoryTest {
         repository.addDevice(light);
         repository.addDevice(thermostat);
 
-        Device foundLight = repository.findDeviceByType(Light.class);
-        Device foundThermostat = repository.findDeviceByType(Thermostat.class);
+        Device foundLight = repository.findDeviceByType("Light");
+        Device foundThermostat = repository.findDeviceByType("Thermostat");
 
         assertNotNull(foundLight);
         assertNotNull(foundThermostat);

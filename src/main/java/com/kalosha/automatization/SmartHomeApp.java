@@ -3,9 +3,6 @@ package com.kalosha.automatization;
 import com.kalosha.automatization.creator.DeviceFactory;
 import com.kalosha.automatization.creator.SmartHomeFactory;
 import com.kalosha.automatization.model.device.Device;
-import com.kalosha.automatization.model.light.Light;
-import com.kalosha.automatization.model.thermostat.Thermostat;
-import com.kalosha.automatization.model.thermostat.impl.ThermostatImplementation;
 import com.kalosha.automatization.reader.DeviceInitializer;
 import org.apache.log4j.Logger;
 
