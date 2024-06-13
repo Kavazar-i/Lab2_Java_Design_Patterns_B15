@@ -1,22 +1,41 @@
-2024-06-02 17:30:09 ERROR DeviceInitializer:63 - Cannot invoke "java.net.URL.toURI()" because the return value of "java.lang.Class.getResource(String)" is null
-2024-06-02 17:30:09 INFO  DeviceInitializer:86 - Generated Thermostat with state Off
-2024-06-02 17:30:09 INFO  LightImplementation:25 - Light state changed to OffState
-2024-06-02 17:30:09 INFO  DeviceInitializer:86 - Generated Light with state Off
-2024-06-02 17:30:09 INFO  LightImplementation:25 - Light state changed to OffState
-2024-06-02 17:30:09 INFO  DeviceInitializer:86 - Generated Light with state Off
-2024-06-02 17:30:09 INFO  LightImplementation:25 - Light state changed to OnState
-2024-06-02 17:30:09 INFO  DeviceInitializer:86 - Generated Light with state On
-2024-06-02 17:30:09 INFO  DeviceInitializer:86 - Generated Thermostat with state On
-2024-06-02 17:30:09 INFO  SmartHomeApp:29 - com.kalosha.automatization.model.light.Light@2ef9b8bc
-2024-06-02 17:30:09 INFO  LightImplementation:14 - Light is turned on.
-2024-06-02 17:30:09 INFO  SmartHomeApp:31 - com.kalosha.automatization.model.light.Light@2ef9b8bc
-2024-06-02 17:30:09 INFO  SmartHomeApp:29 - com.kalosha.automatization.model.light.Light@5d624da6
-2024-06-02 17:30:09 INFO  LightImplementation:14 - Light is turned on.
-2024-06-02 17:30:09 INFO  SmartHomeApp:31 - com.kalosha.automatization.model.light.Light@5d624da6
-2024-06-02 17:30:09 INFO  SmartHomeApp:29 - com.kalosha.automatization.model.light.Light@1e67b872
-2024-06-02 17:30:09 INFO  LightImplementation:14 - Light is turned on.
-2024-06-02 17:30:09 INFO  SmartHomeApp:31 - com.kalosha.automatization.model.light.Light@1e67b872
-2024-06-02 17:30:09 INFO  SmartHomeApp:29 - com.kalosha.automatization.model.thermostat.Thermostat@60addb54
-2024-06-02 17:30:09 INFO  SmartHomeApp:31 - com.kalosha.automatization.model.thermostat.Thermostat@60addb54
-2024-06-02 17:30:09 INFO  SmartHomeApp:29 - com.kalosha.automatization.model.thermostat.Thermostat@3f2a3a5
-2024-06-02 17:30:09 INFO  SmartHomeApp:31 - com.kalosha.automatization.model.thermostat.Thermostat@3f2a3a5
+2024-06-13 10:31:35 ERROR DeviceInitializer:68 - Cannot invoke "java.net.URL.toURI()" because the return value of "java.lang.Class.getResource(String)" is null
+2024-06-13 10:31:35 INFO  LightImpl:27 - Light state changed to OffState
+2024-06-13 10:31:35 INFO  DeviceInitializer:93 - Generated Light with state Off
+2024-06-13 10:31:35 INFO  LightImpl:27 - Light state changed to OnState
+2024-06-13 10:31:35 INFO  DeviceInitializer:93 - Generated Light with state On
+2024-06-13 10:31:35 INFO  ThermostatImpl:29 - Thermostat state changed to OffState
+2024-06-13 10:31:35 INFO  DeviceInitializer:93 - Generated Thermostat with state Off
+2024-06-13 10:31:35 INFO  ThermostatImpl:29 - Thermostat state changed to OffState
+2024-06-13 10:31:35 INFO  DeviceInitializer:93 - Generated Thermostat with state Off
+2024-06-13 10:31:35 INFO  LightImpl:27 - Light state changed to OnState
+2024-06-13 10:31:35 INFO  DeviceInitializer:93 - Generated Light with state On
+2024-06-13 10:31:35 INFO  SmartHomeApp:24 - com.kalosha.automatization.model.light.Light@60addb54
+2024-06-13 10:31:35 INFO  LightImpl:14 - Light is turned on.
+2024-06-13 10:31:35 INFO  SmartHomeApp:26 - com.kalosha.automatization.model.light.Light@60addb54
+2024-06-13 10:31:35 INFO  SmartHomeApp:24 - com.kalosha.automatization.model.light.Light@3f2a3a5
+2024-06-13 10:31:35 INFO  LightImpl:14 - Light is turned on.
+2024-06-13 10:31:35 INFO  SmartHomeApp:26 - com.kalosha.automatization.model.light.Light@3f2a3a5
+2024-06-13 10:31:35 INFO  SmartHomeApp:24 - com.kalosha.automatization.model.light.Light@4cb2c100
+2024-06-13 10:31:35 INFO  LightImpl:14 - Light is turned on.
+2024-06-13 10:31:35 INFO  SmartHomeApp:26 - com.kalosha.automatization.model.light.Light@4cb2c100
+2024-06-13 10:31:35 INFO  SmartHomeApp:24 - com.kalosha.automatization.model.thermostat.Thermostat@6fb554cc
+2024-06-13 10:31:35 INFO  ThermostatImpl:16 - Thermostat is turned on.
+2024-06-13 10:31:35 INFO  SmartHomeApp:26 - com.kalosha.automatization.model.thermostat.Thermostat@6fb554cc
+2024-06-13 10:31:35 INFO  SmartHomeApp:24 - com.kalosha.automatization.model.thermostat.Thermostat@614c5515
+2024-06-13 10:31:35 INFO  ThermostatImpl:16 - Thermostat is turned on.
+2024-06-13 10:31:35 INFO  SmartHomeApp:26 - com.kalosha.automatization.model.thermostat.Thermostat@614c5515
+2024-06-13 10:31:39 ERROR DeviceInitializer:68 - Cannot invoke "java.net.URL.toURI()" because the return value of "java.lang.Class.getResource(String)" is null
+2024-06-13 10:31:39 INFO  ThermostatImpl:29 - Thermostat state changed to OnState
+2024-06-13 10:31:39 INFO  DeviceInitializer:93 - Generated Thermostat with state On
+2024-06-13 10:31:39 INFO  ThermostatImpl:29 - Thermostat state changed to OnState
+2024-06-13 10:31:39 INFO  DeviceInitializer:93 - Generated Thermostat with state On
+2024-06-13 10:31:39 INFO  LightImpl:27 - Light state changed to OnState
+2024-06-13 10:31:39 INFO  DeviceInitializer:93 - Generated Light with state On
+2024-06-13 10:31:39 INFO  ThermostatImpl:29 - Thermostat state changed to OnState
+2024-06-13 10:31:39 INFO  DeviceInitializer:93 - Generated Thermostat with state On
+2024-06-13 10:31:39 INFO  ThermostatImpl:29 - Thermostat state changed to OffState
+2024-06-13 10:31:39 INFO  DeviceInitializer:93 - Generated Thermostat with state Off
+2024-06-13 10:31:39 INFO  LightImpl:27 - Light state changed to OnState
+2024-06-13 10:31:39 INFO  DeviceInitializer:64 - Initialized Light with state On
+2024-06-13 10:31:39 INFO  ThermostatImpl:29 - Thermostat state changed to OffState
+2024-06-13 10:31:39 INFO  DeviceInitializer:64 - Initialized Thermostat with state Off
