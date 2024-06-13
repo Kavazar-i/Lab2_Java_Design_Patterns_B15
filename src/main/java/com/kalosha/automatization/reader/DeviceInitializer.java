@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kalosha.automatization.DeviceRepository;
 import com.kalosha.automatization.creator.DeviceFactory;
+import com.kalosha.automatization.creator.LightFactory;
+import com.kalosha.automatization.creator.TermostatFactory;
 import com.kalosha.automatization.model.device.Device;
 import com.kalosha.automatization.model.state.OffState;
 import com.kalosha.automatization.model.state.OnState;
@@ -24,9 +26,13 @@ public class DeviceInitializer {
     private Random random = new Random();
 
 
-    public DeviceInitializer(DeviceFactory deviceFactory, DeviceRepository repository) {
-        this.deviceFactory = deviceFactory;
+    public DeviceInitializer(DeviceRepository repository) {
         this.repository = repository;
+    }
+
+    public boolean setDeviceFactory(DeviceFactory factory) {
+        deviceFactory = factory;
+        return true;
     }
 
     public void initializeDevicesFromFile(String filename) {
@@ -44,9 +50,11 @@ public class DeviceInitializer {
                 for (DeviceData data : devices) {
                     Device device;
                     if (data.type.equals("Light")) {
-                        device = deviceFactory.createLight();
+                        setDeviceFactory(new LightFactory());
+                        device = deviceFactory.createDevice();
                     } else if (data.type.equals("Thermostat")) {
-                        device = deviceFactory.createThermostat();
+                        setDeviceFactory(new TermostatFactory());
+                        device = deviceFactory.createDevice();
                     } else {
                         continue;
                     }
@@ -72,9 +80,11 @@ public class DeviceInitializer {
 
             Device device;
             if (type.equals("Light")) {
-                device = deviceFactory.createLight();
+                setDeviceFactory(new LightFactory());
+                device = deviceFactory.createDevice();
             } else {
-                device = deviceFactory.createThermostat();
+                setDeviceFactory(new TermostatFactory());
+                device = deviceFactory.createDevice();
             }
 
             State state = stateStr.equals("On") ? new OnState(device.getDevice()) : new OffState(device.getDevice());

@@ -1,7 +1,8 @@
 package com.kalosha.automatization;
 
 import com.kalosha.automatization.creator.DeviceFactory;
-import com.kalosha.automatization.creator.SmartHomeFactory;
+import com.kalosha.automatization.creator.LightFactory;
+import com.kalosha.automatization.creator.TermostatFactory;
 import com.kalosha.automatization.model.device.Device;
 import com.kalosha.automatization.model.light.Light;
 import com.kalosha.automatization.model.thermostat.Thermostat;
@@ -20,9 +21,11 @@ public class DeviceRepositoryTest {
     @Before
     public void setUp() {
         repository = new DeviceRepository();
-        DeviceFactory factory = new SmartHomeFactory();
-        light = factory.createLight();
-        thermostat = factory.createThermostat();
+        DeviceFactory factory;
+        factory = new LightFactory();
+        light = factory.createDevice();
+        factory = new TermostatFactory();
+        thermostat = factory.createDevice();
     }
 
     @Test

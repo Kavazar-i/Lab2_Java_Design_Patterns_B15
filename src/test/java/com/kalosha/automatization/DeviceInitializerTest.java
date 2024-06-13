@@ -1,7 +1,6 @@
 package com.kalosha.automatization;
 
 import com.kalosha.automatization.creator.DeviceFactory;
-import com.kalosha.automatization.creator.SmartHomeFactory;
 import com.kalosha.automatization.reader.DeviceInitializer;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,9 +13,8 @@ public class DeviceInitializerTest {
 
     @Before
     public void setUp() {
-        deviceFactory = new SmartHomeFactory();
         repository = new DeviceRepository();
-        initializer = new DeviceInitializer(deviceFactory, repository);
+        initializer = new DeviceInitializer(repository);
     }
 
     @Test
