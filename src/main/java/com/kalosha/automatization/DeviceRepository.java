@@ -5,9 +5,10 @@ import com.kalosha.automatization.model.device.Device;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class DeviceRepository {
-    private List<Device> devices = new ArrayList<>();
+    private final List<Device> devices = new ArrayList<>();
 
     public void addDevice(Device device) {
         devices.add(device);
@@ -17,11 +18,10 @@ public class DeviceRepository {
         return devices;
     }
 
-    public Device findDeviceByType(String deviceTypeName) {
+    public Optional<Device> findDeviceByType(String deviceTypeName) {
         return devices.stream()
                 .filter(device -> device.getClass().getSimpleName().equals(deviceTypeName))
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 
     public void sortDevices() {

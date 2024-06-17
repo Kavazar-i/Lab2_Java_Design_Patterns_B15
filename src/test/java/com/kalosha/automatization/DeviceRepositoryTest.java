@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 
@@ -43,8 +44,8 @@ public class DeviceRepositoryTest {
         repository.addDevice(light);
         repository.addDevice(thermostat);
 
-        Device foundLight = repository.findDeviceByType("Light");
-        Device foundThermostat = repository.findDeviceByType("Thermostat");
+        Optional<Device> foundLight = repository.findDeviceByType("Light");
+        Optional<Device> foundThermostat = repository.findDeviceByType("Thermostat");
 
         assertNotNull(foundLight);
         assertNotNull(foundThermostat);
